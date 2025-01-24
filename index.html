@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>random bg color chnage</title>
+  <style type="text/css" media="all">
+    #parent {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .box {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 70px;
+      height: 70px;
+      border: 2px solid black;
+    }
+  </style>
+</head>
+<body>
+  <div id="parent">
+  <div class="box">Box 1</div>
+  <div class="box">Box 2</div>
+  <div class="box">Box 3</div>
+  <div class="box">Box 4</div>
+</div>
+<button onclick="btnc()">Change</button>
+<script>
+const box = document.querySelectorAll("#parent .box");
+
+function btnc() {
+  box.forEach(color => {
+    color.style.backgroundColor = `#${rend()}`;
+  });
+}
+
+function rend() {
+  const color = Math.floor(Math.random() * 16777215);
+  return color.toString(16).padStart(6, '0');
+}
+</script>
+</body>
+</html>
