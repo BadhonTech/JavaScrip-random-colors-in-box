@@ -4,20 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>random bg color chnage</title>
+  <title>Document</title>
   <style type="text/css" media="all">
+    body {
+      color: white;
+      font-size: 30px;
+      background: #252525;
+    }
     #parent {
       display: flex;
       justify-content: center;
       gap: 10px;
+      align-items: center;
+      flex-direction: column;
     }
     .box {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 70px;
-      height: 70px;
-      border: 2px solid black;
+      width: 130px;
+      height: 130px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+    button{
+      font-size: 20px;
+      padding: 20px 40px;
+      color: white;
+      background: #0000ff;
+      border-radius: 50px;
     }
   </style>
 </head>
@@ -28,7 +43,10 @@
   <div class="box">Box 3</div>
   <div class="box">Box 4</div>
 </div>
+<br />
+<center>
 <button onclick="btnc()">Change</button>
+</center>
 <script>
 const box = document.querySelectorAll("#parent .box");
 
